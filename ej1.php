@@ -16,6 +16,9 @@ $ip2=substr($ip, strpos($ip, ".", strpos($ip, ".")+1)+1, strpos(substr($ip, strp
 
 $ip3=substr($ip, strpos($ip, ".", strpos($ip, ".", strpos($ip, ".")+1)+1)+1);
 
+
+printf('La ip '.$ip.' en binario es: %08b.%08b.%08b.%08b', $ip0, $ip1, $ip2, $ip3);
+/*
 echo "La ip ".$ip." en binario es: ";
 printf('%08b',$ip0);
 echo ".";
@@ -24,7 +27,7 @@ echo ".";
 printf('%08b',$ip2);
 echo ".";
 printf('%08b',$ip3);
-
+*/
 ?>
 </BODY>
 </HTML>
