@@ -49,7 +49,7 @@ for ($i=0; $i < $numjug; $i++) {
 
 while ($contjugador < $numjug) {
 			while ($contcarton<3) {
-				$copiabombo=$bombo;
+				$copiabombo=range(1, 60);
 				shuffle($copiabombo); //aleatorizamos un array de 60nums
 				while (count($jugadores[$contjugador][$contcarton])<15) {
 					array_push($jugadores[$contjugador][$contcarton],array_pop($copiabombo)); //metemos numero al carton y lo sacmos del array
@@ -60,15 +60,10 @@ while ($contjugador < $numjug) {
 			$contjugador++;
 	}
 	shuffle($bombo);
-
-
-
-
-
 $jugadoresog=$jugadores;//Para recordar los numeros de los cartones y esas cosas ya que vamos a vaciar sus arrays para determinar al ganador
 
 
-while (!$ganador) {
+while (count($bombo)!=0) {
 	$bola=array_pop($bombo); //Sacamos bola
 	array_push($bomboog,$bola); //guardamos el numero para saber cuales han salido en el futuro
 	for ($i=0; $i < $numjug ; $i++) { 
@@ -81,8 +76,12 @@ while (!$ganador) {
 				echo "</br> Ha ganado el jugador ".($i+1)." con el carton ".($j+1)."."; //Ganador dentro del bucle por si hay varios ganadores.
 			}
 		}
-	}
+		
 
+	}
+if ($ganador) {
+			break;
+		}
 }
 
 
