@@ -18,24 +18,14 @@ $numjug=4;
 $jugadores = array();
 $bomboog = array();
 
-
-/*
-array(array(),array(),array()),
-array(array(),array(),array()),
-array(array(),array(),array()),
-array(array(),array(),array())*/
-//Array de 4 jugadores con 3 arrays de carton cada uno
-
-
-
-function crearJugadores($numjug, $jugadores){
+function crearJugadores($numjug, $jugadores){//Esta funcion crea un array de jugadores y cartones basado en el numero de jugadores requerido
 	for ($i=0; $i < $numjug; $i++) { 
 		array_push($jugadores,array(array(),array(),array())); //Construimos el array jugadores basandonos en el numero de jugadores
 	}
 	return $jugadores;
 }
 
-function construirCartones($numjug, $jugadores){
+function construirCartones($numjug, $jugadores){ //esta funcion llena de numeros los cartones del array jugadores
 	$contjugador=0;
 	$contcarton=0;
 	while ($contjugador < $numjug) {
@@ -55,12 +45,11 @@ function construirCartones($numjug, $jugadores){
 
 $jugadores = crearJugadores($numjug, $jugadores);
 $jugadores = construirCartones($numjug, $jugadores);
-//$jugadoresog = $jugadores;
 $bombo = range(1,60);
 shuffle($bombo);
 
 
-function jugarPartida($numjug,$jugadores,$bombo){
+function jugarPartida($numjug,$jugadores,$bombo){ //Ejecutamos la partida sacando numeros del bombo hasta tener un ganador o quedarnos sin numeros(Devuelve los numeros que hayan salido)
 	$ganador=false;
 	$bomboog=array();
 	$bola;
@@ -92,7 +81,7 @@ $bombo=jugarPartida($numjug,$jugadores,$bombo);
 
 
 
-function imprimirJuego($numjug,$jugadores,$bombo){
+function imprimirJuego($numjug,$jugadores,$bombo){ //Imprime una tabla de html absurdamente fea
 	for ($i=0; $i < $numjug ; $i++) {  //Interfaz mu fea
 		for ($j=0; $j <3 ; $j++) { //una tabla por jcarton
 		echo "<table style='border: 1px solid black;'>";
