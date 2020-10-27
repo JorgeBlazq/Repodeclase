@@ -83,6 +83,10 @@ function imprimirJuego($numjug,$jugadores,$bombo){ //Imprime una tabla de html a
 }
 	echo "</table>";
 	}
+	echo "</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>";
+	while (count($bombo)!=0) {	
+		echo '<img src="img/'.array_pop($bombo).'.png" width="30px">';
+	}
 }
 ?>
 </BODY>
