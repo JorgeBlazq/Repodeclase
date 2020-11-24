@@ -1,0 +1,38 @@
+<HTML>
+
+<HEAD> 
+<title>JUEGO DADOS - Desarrollo Web Entorno Servidor</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</HEAD>
+
+<BODY>
+<br><br><br>
+ <div class="container ">
+        <!--Aplicacion-->
+		<div class="card border-success mb-3" style="max-width: 30rem;">
+		<div class="card-header"><H1>Juego Dados<H1></div>
+		<div class="card-body">
+      
+	   
+
+	<!-- INICIO DEL FORMULARIO -->
+	<form name='Dados' action='ex1dados.php' method='post'>
+		
+					
+		<div class="form-group">
+			Jugador 1: <input type="text" name="nombre1" placeholder="jugador1" class="form-control"><br>
+			Jugador 2: <input type="text" name="nombre2" placeholder="jugador2" class="form-control"><br>
+			Jugador 3: <input type="text" name="nombre3" placeholder="jugador3" class="form-control"><br>
+			Jugador 4: <input type="text" name="nombre4"  placeholder="jugador4" class="form-control"><br>
+			Numero Dados: <input type='text' name='numdados' value='' size=5><br><br>
+        </div>
+		
+		<div>Pulsa para Tirar Dados: 
+			<input type="submit" value="Tirar Dados" name="tirardados" class="btn btn-warning disabled">
+			
+		</div>		
+	</form>
+	<!-- FIN DEL FORMULARIO -->
+</BODY>
+
+</HTML>
